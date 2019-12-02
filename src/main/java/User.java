@@ -8,7 +8,7 @@ public class User {
         computer = new Computer();
     }
 
-    int[] get_userNumber(){
+    int[] getUserNumber(){
         return userNumber;
     }
 
@@ -17,7 +17,7 @@ public class User {
      문자열 형태의 번호가 유효한지 검사, 정수 배열로 변환
      */
 
-    void input_userNumber(){
+    void inputUserNumber(){
         Scanner scanner = new Scanner(System.in);
         String number;
         int transNumber;
@@ -26,7 +26,7 @@ public class User {
         do{
             System.out.print("숫자를 입력하세요: ");
             number = scanner.next();
-        }while(!computer.check_userNumber(number));
+        }while(!computer.checkUserNumber(number));
 
         transNumber = Integer.parseInt(number);
         for(int i=2; i>=0; i--){

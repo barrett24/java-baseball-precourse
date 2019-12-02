@@ -15,16 +15,16 @@ public class Manager {
      게임 시작 및 해당 게임의 종료여부 판별
      */
 
-    void start_game(){
-        computer.generate_randomNumber();
+    void startGame(){
+        computer.generateRandomNumber();
 
         while(true){
-            user.input_userNumber();
+            user.inputUserNumber();
 
-            if(!computer.count_strike_and_balls(
-                    computer.get_checkBoard(),
-                    computer.get_randomNumber(),
-                    user.get_userNumber())){
+            if(!computer.countStrikeAndBalls(
+                    computer.getCheckBoard(),
+                    computer.getRandomNumber(),
+                    user.getUserNumber())){
                 continue;
             }
             break;
@@ -35,7 +35,7 @@ public class Manager {
      이전 게임 종료 후 프로그램의 종료여부 판별
      */
 
-    void restart_or_end_game(){
+    void restartOrEndGame(){
         String choice;
 
         while(true){
@@ -43,7 +43,7 @@ public class Manager {
             choice = scanner.nextLine();
 
             if(choice.equals("1")){
-                start_game();
+                startGame();
             }else if(choice.equals("2")){
                 System.out.println("게임을 종료합니다.");
                 break;
